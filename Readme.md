@@ -3,7 +3,9 @@ This Laravel package provides a simple and efficient way to manage site settings
 
 ## Installation
 To install the package, add it to your Laravel project using Composer:
-composer require your/package-name
+```php
+composer require intelrx/sitesettings
+```
 
 # Usage
 Import the package in your class
