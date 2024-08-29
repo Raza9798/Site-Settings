@@ -1,0 +1,27 @@
+{
+    "name": "intelrx/sitesettings",
+    "description": "Application global properties",
+    "require": {
+        "php": "^8.3"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Intelrx\\Sitesettings\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "raza9798",
+            "email": "m.raza9798@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Intelrx\\Sitesettings\\SitesettingsProvider"
+            ]
+        }
+    }
+}
