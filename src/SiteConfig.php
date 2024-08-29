@@ -42,4 +42,9 @@ class SiteConfig extends Controller
             $data->delete();
         }
     }
+
+    public static function list()
+    {
+        return SiteSettings::all();
+    }
 }
