@@ -4,6 +4,7 @@ namespace Intelrx\Sitesettings;
 
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Foundation\AliasLoader;
 use Intelrx\Sitesettings\Console\Commands\configCommand;
 
 class SitesettingsProvider extends ServiceProvider
@@ -14,6 +15,7 @@ class SitesettingsProvider extends ServiceProvider
     public function register(): void
     {
         $this->loadMigrationsFrom(__DIR__ . '/database/migrations');
+        $this->registerAlias();
     }
 
     /**
@@ -27,5 +29,10 @@ class SitesettingsProvider extends ServiceProvider
         }
     }
 
+    public function registerAlias(): void
+    {
+        $loader = AliasLoader::getInstance();
+        $loader->alias('SiteConfig', \Intelrx\Sitesettings\SiteConfig::class);
+    }
     
 }
