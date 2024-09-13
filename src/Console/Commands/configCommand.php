@@ -3,6 +3,7 @@
 namespace Intelrx\Sitesettings\Console\Commands;
 
 use Illuminate\Console\Command;
+use Intelrx\Sitesettings\SiteConfig;
 use Intelrx\Sitesettings\SitesettingsProvider;
 
 class configCommand extends Command
@@ -26,6 +27,6 @@ class configCommand extends Command
      */
     public function handle()
     {
-        // dd('configssssssss');
+        SiteConfig::update('phone', 'raza');
     }
 }
