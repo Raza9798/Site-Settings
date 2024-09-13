@@ -19,6 +19,11 @@ SiteConfig::delete('phone');
 SiteConfig::list()
 ```
 
+usage in the blade
+```php
+{{ SiteConfig::get('phone') }}
+```
+
 ## Storing Settings
 To store a new site setting, use the store method:
 
