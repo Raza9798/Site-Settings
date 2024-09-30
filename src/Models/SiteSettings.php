@@ -36,7 +36,7 @@ class SiteSettings extends Model
 
         $json = json_encode($config, JSON_PRETTY_PRINT);
         file_put_contents(__DIR__ . '/SiteConfig.json', $json);
-        SiteSettings::syncFile();
+        // SiteSettings::syncFile();
     }
 
     public static function envArray(): array
